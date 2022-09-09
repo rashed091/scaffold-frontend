@@ -72,3 +72,20 @@ yarn add -D @babel/core @babel/preset-env @babel/preset-react @babel/preset-type
 ```
 yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin
 ```
+#### Add webpack CSS support
+```
+yarn add -D css-loader style-loader
+```
+
+#### Add a declarations.d.ts file
+Allows us to do imline import of image files
+
+#### Add webpack merge package
+```
+yarn add -D webpack-merge
+```
+
+### Add Webpack support for react hot reload
+```
+yarn add -D @pmmmwh/react-refresh-webpack-plugin react-refresh
+```
