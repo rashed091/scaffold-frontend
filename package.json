@@ -5,7 +5,8 @@
   "author": "mrasheduzzaman <rashed091nsu@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack server --config webpack/webpack.common.js --open"
+    "start": "webpack server --config webpack/webpack.config.js --env env=dev --open",
+    "build": "webpack server --config webpack/webpack.config.js --env env=prod --open"
   },
   "dependencies": {
     "react": "^18.2.0",
