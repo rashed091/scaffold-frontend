@@ -132,3 +132,13 @@ module.exports = {
   },
 }
 ```
+
+#### Add prettier packages
+```
+yarn Add -D prettier eslint-config-prettier eslint-plugin-prettier
+```
+
+#### Add prettier config
+```javascript
+
+```
