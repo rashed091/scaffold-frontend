@@ -1,10 +1,13 @@
 import { FC } from 'react';
+import IMAGE from './react-icon.png'
+import './style.css';
 
 const App: FC = () =>
 {
 	return (
 		<>
-			<p>Hello, world</p>
+			<h1>Hello, world</h1>
+			<img src={IMAGE} alt="Reac logo" />
 		</>
 	);
 };
