@@ -7,17 +7,17 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<GITHUB_USERNAME>/<PROJECT_NAME>.git"
+    "url": "git+https://github.com/rashed091/scaffold-frontend.git"
   },
   "keywords": [
-    "<FIRST_KEYWORD>",
-    "<SECOND_KEYWORD>",
-    "<N_KEYWORD>"
+    "react",
+    "bootstrap",
+    "scaffold"
   ],
   "bugs": {
-    "url": "https://github.com/<GITHUB_USERNAME>/<PROJECT_NAME>/issues"
+    "url": "https://github.com/rashed091/scaffold-frontend/issues"
   },
-  "homepage": "https://github.com/<GITHUB_USERNAME>/<PROJECT_NAME>#readme",
+  "homepage": "https://github.com/rashed091/scaffold-frontend#readme",
   "scripts": {
     "start": "webpack server --config webpack/webpack.config.js --env env=dev",
     "build": "webpack server --config webpack/webpack.config.js --env env=prod",
