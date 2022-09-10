@@ -4,9 +4,19 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
   },
+  root: true,
+  env: {
+    node: true,
+    es6: true,
+    browser: true,
+  },
+  ignorePatterns: ['node_modules/*'],
   settings: {
     react: {
       version: 'detect',
+    },
+    'import/resolver': {
+      typescript: {},
     },
   },
   extends: [
@@ -20,6 +30,9 @@ module.exports = {
     'plugin:eslint-comments/recommended',
     'prettier',
     'plugin:prettier/recommended',
+    'eslint:recommended',
+    'plugin:testing-library/react',
+    'plugin:jest-dom/recommended',
   ],
   rules: {
     'no-unused-vars': 'off',
@@ -29,5 +42,37 @@ module.exports = {
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'no-restricted-imports': [
+      'error',
+      {
+        patterns: ['@/features/*/*'],
+      },
+    ],
+    'linebreak-style': ['error', 'unix'],
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+        ],
+        'newlines-between': 'always',
+        alphabetize: { order: 'asc', caseInsensitive: true },
+      },
+    ],
+    'import/default': 'off',
+    'import/no-named-as-default-member': 'off',
+    'import/no-named-as-default': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
+    '@typescript-eslint/explicit-function-return-type': ['off'],
+    '@typescript-eslint/no-empty-function': ['off'],
+    '@typescript-eslint/no-explicit-any': ['off'],
+
+    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
   },
-}
+};
