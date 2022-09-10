@@ -35,5 +35,4 @@
     "*.config.js",
     "*.test.ts*"
   ],
-  "extends": "./tsconfig.paths.json"
 }
