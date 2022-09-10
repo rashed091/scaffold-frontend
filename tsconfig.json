@@ -27,5 +27,13 @@
   "include": [
     "src"
   ],
-  "exclude": ["node_modules", "build", "coverage", "webpack.*.js", "*.config.js", "*.test.ts*"]
+  "exclude": [
+    "node_modules",
+    "build",
+    "coverage",
+    "webpack.*.js",
+    "*.config.js",
+    "*.test.ts*"
+  ],
+  "extends": "./tsconfig.paths.json"
 }
