@@ -163,3 +163,11 @@ yarn add -D husky lint-staged
     }
   }
 ```
+
+#### Add async/await support
+```
+yarn add -D @babel/runtime @babel/plugin-transform-runtime 
+```
+
+#### Add static assets copy support
+```yarn add -D copy-webpack-plugin```
