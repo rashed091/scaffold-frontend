@@ -143,11 +143,12 @@ yarn Add -D prettier eslint-config-prettier eslint-plugin-prettier
 
 ```
 
-#### Add precommit config
+#### Add precommit packages
 ```
 yarn add -D husky lint-staged
 ```
 
+#### Add precommit config
 ```json
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
@@ -171,3 +172,6 @@ yarn add -D @babel/runtime @babel/plugin-transform-runtime
 
 #### Add static assets copy support
 ```yarn add -D copy-webpack-plugin```
+
+#### Add bundle analyzer
+```yarn add -D webpack-bundle-analyzer```
