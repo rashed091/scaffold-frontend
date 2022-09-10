@@ -5,7 +5,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 module.exports = {
   entry: path.resolve(__dirname, '..', './src/index.tsx'),
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.tsx', '.ts', 'jsx', '.js'],
   },
   module: {
     rules: [
@@ -43,7 +43,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: __dirname + '/src/images',
+          from: __dirname + '/src/assets/images',
           to: 'assets/images',
           noErrorOnMissing: true,
         },
