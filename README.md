@@ -21,23 +21,32 @@ yarn add -D typescript @types/react @types/react-dom
 ```json
 {
   "compilerOptions": {
-    "target": "ES5",
-    "module": "ESNext",
-    "moduleResolution": "node",
+		"outDir": "./build/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "target": "es5",
     "lib": [
-      "DOM",
-      "ESNext"
+      "dom",
+      "dom.iterable",
+      "esnext"
     ],
-    "jsx": "react-jsx",
-    "noEmit": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "strict": true,
+    "allowJs": true,
     "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
-  "include": ["src/**/*"]
+  "include": [
+    "src"
+  ]
 }
 ```
 #### Add babel dev dependencies
