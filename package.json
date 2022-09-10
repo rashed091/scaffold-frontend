@@ -27,7 +27,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "check-types": "tsc --project tsconfig.json --pretty --noEmit",
-    "check-format": "npm run prettier -- --list-different"
+    "check-format": "prettier -- --list-different"
   },
   "dependencies": {
     "react": "^18.2.0",
