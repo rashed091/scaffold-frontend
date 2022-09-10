@@ -1,5 +1,5 @@
 # Introduction
-The goal of this repo is setup a react app with typescript support, by removing the middle man create-react-app which abstrat a lot of details from a beginer like me. I'm very insterested in how things done behind the sence and how one day I can build tool like that of my own. So I spend considerable amount of time getting to know tools by doing hands on tutorial.
+The goal of this repo is setup a react app with typescript support, by removing the middle man create-react-app which abstrat a lot of details from a beginer like me. I'm very insterested in how things are done behind the scene and one day how I could build my own tools. So I spend considerable amount of time getting to know these tools by doing hands on tutorial.
 
 For someone who is already experience with webpack and babel setup process, they can just ignore everything here and type:
 
