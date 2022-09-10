@@ -93,7 +93,7 @@ yarn add -D @pmmmwh/react-refresh-webpack-plugin react-refresh
 
 #### Add eslint support
 ```
-yarn add -D eslint eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-import eslint-plugin-jsx-a11y
+yarn add -D eslint eslint-plugin-react eslint-plugin-react-hooks @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-import eslint-plugin-jsx-a11y eslint-config-prettier eslint-plugin-eslint-comments
 ```
 
 #### Add eslint config
@@ -118,7 +118,7 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:jsx-a11y/recommended',
     'plugin:eslint-comments/recommended',
-    'prettier/@typescript-eslint',
+    'prettier',
     'plugin:prettier/recommended',
   ],
   rules: {
