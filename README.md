@@ -184,3 +184,6 @@ yarn add -D @babel/runtime @babel/plugin-transform-runtime
 
 #### Add bundle analyzer
 ```yarn add -D webpack-bundle-analyzer```
+
+#### Add jest package
+```yarn add -D jest ts-jest jest-environment-jsdom @types/jest @testing-library/jest-dom @testing-library/react```
