@@ -1,6 +1,4 @@
-# React Typescript Starter Project
-
-### Initialize the project with command
+# Create a react typescript project from scratch
 
 ```
 yarn init -y
@@ -10,7 +8,6 @@ yarn init -y
 ```
 yarn add react react-dom
 ```
-
 
 #### Add typescript support packages
 ```
@@ -49,6 +46,7 @@ yarn add -D typescript @types/react @types/react-dom
   ]
 }
 ```
+
 #### Add babel dev dependencies
 ```
 yarn add -D @babel/core @babel/preset-env @babel/preset-react @babel/preset-typescript @babel/plugin-transform-runtime babel-loader
@@ -77,10 +75,12 @@ yarn add -D @babel/core @babel/preset-env @babel/preset-react @babel/preset-type
   ]
 }
 ```
+
 #### Add webpack dev dependencies
 ```
 yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin
 ```
+
 #### Add webpack CSS support
 ```
 yarn add -D css-loader style-loader
@@ -98,7 +98,6 @@ yarn add -D webpack-merge
 ```
 yarn add -D @pmmmwh/react-refresh-webpack-plugin react-refresh
 ```
-
 
 #### Add eslint support
 ```
@@ -149,7 +148,15 @@ yarn Add -D prettier eslint-config-prettier eslint-plugin-prettier
 
 #### Add prettier config
 ```javascript
-
+{
+  semi: true,
+  trailingComma: 'es5',
+  singleQuote: true,
+  printWidth: 80,
+  tabWidth: 2,
+  endOfLine: 'auto',
+  bracketSpacing: true,
+}
 ```
 
 #### Add precommit packages
@@ -180,10 +187,41 @@ yarn add -D @babel/runtime @babel/plugin-transform-runtime
 ```
 
 #### Add static assets copy support
-```yarn add -D copy-webpack-plugin```
+```
+yarn add -D copy-webpack-plugin
+```
 
 #### Add bundle analyzer
-```yarn add -D webpack-bundle-analyzer```
+```
+yarn add -D webpack-bundle-analyzer
+```
 
 #### Add jest package
-```yarn add -D jest ts-jest jest-environment-jsdom @types/jest @testing-library/jest-dom @testing-library/react```
+```
+yarn add -D jest ts-jest jest-environment-jsdom @types/jest @testing-library/jest-dom @testing-library/react
+```
+
+#### Add jest config
+```javascript
+{
+  verbose: true,
+  resetMocks: true,
+  testEnvironment: 'jsdom',
+  preset: 'ts-jest',
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx,ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+    '!**/vendor/**',
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100,
+    },
+  },
+}
+```
