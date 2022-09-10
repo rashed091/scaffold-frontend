@@ -41,8 +41,14 @@ module.exports = {
       template: path.resolve(__dirname, '..', './public/index.html'),
     }),
     new CopyPlugin({
-      patterns: [{ from: 'source', to: 'dest' }],
+      patterns: [
+        {
+          from: __dirname + '/src/images',
+          to: 'assets/images',
+          noErrorOnMissing: true,
+        },
+      ],
     }),
   ],
   stats: 'errors-only',
-}
+};
