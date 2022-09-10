@@ -142,3 +142,24 @@ yarn Add -D prettier eslint-config-prettier eslint-plugin-prettier
 ```javascript
 
 ```
+
+#### Add precommit config
+```
+yarn add -D husky lint-staged
+```
+
+```json
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "eslint --fix"
+    ],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+```
