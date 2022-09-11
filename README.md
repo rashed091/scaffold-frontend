@@ -16,6 +16,13 @@ If you are still reading then I'm guessing that you want to learn how to do ever
 - [React Project Configuration](docs/react-config.md)
 - [React Project Structure](docs/project-structure.md)
 - [React Component Architecture](docs/component-architecture.md)
+- [React Component Lifecycle](docs/state-lifecycle.md)
+- [React App Layout](docs/app-shell.md)
+- [React App Navigation](docs/app-navigation.md)
+- [Authentication Layer](docs/auth.md)
+- [Internationalization](docs/i18n.md)
+- [API Layer](docs/api-layer.md)
+- [Testing](docs/testing.md)
 
 
 ## Reference

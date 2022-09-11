@@ -231,3 +231,8 @@ yarn add -D jest ts-jest jest-environment-jsdom @types/jest @testing-library/jes
   },
 }
 ```
+
+#### Add Playwright support
+```
+yarn create playwright
+```
