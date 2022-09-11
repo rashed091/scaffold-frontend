@@ -16,7 +16,9 @@ module.exports = {
       version: 'detect',
     },
     'import/resolver': {
-      typescript: {},
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
     },
   },
   extends: [
@@ -28,9 +30,9 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:jsx-a11y/recommended',
     'plugin:eslint-comments/recommended',
+    'eslint:recommended',
     'prettier',
     'plugin:prettier/recommended',
-    'eslint:recommended',
     'plugin:testing-library/react',
     'plugin:jest-dom/recommended',
   ],
