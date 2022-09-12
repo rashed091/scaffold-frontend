@@ -9,7 +9,7 @@ import {
 import { useDisclosure } from '@mantine/hooks';
 import { Search } from 'tabler-icons-react';
 
-import { MantineLogo } from './MantineLogo';
+import { MantineLogo } from '../assets/MantineLogo';
 
 const useStyles = createStyles((theme) => ({
   header: {
