@@ -7,6 +7,7 @@
 		"source.fixAll.eslint": true,
 		"source.organizeImports": true
 	},
-	"typescript.preferences.importModuleSpecifier": "relative"
+	"typescript.preferences.importModuleSpecifier": "relative",
+	"jest.showTerminalOnLaunch": false,
 
 }
