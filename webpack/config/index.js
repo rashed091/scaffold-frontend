@@ -1,8 +1,4 @@
 import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 const JSOutput = '[name].[contenthash].js';
 const CSSOutput = '[name].[contenthash].css';
@@ -17,7 +13,5 @@ export const paths = {
   build: path.resolve(__dirname, '../../', 'build'), // Destination build directory.
   public: path.resolve(__dirname, '../../', 'public'), // Public directory
 };
-
-console.log(paths.src);
 
 export const isDevelopment = process.env.NODE_ENV !== 'production';
