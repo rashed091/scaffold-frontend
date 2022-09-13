@@ -4,7 +4,7 @@
     "sourceMap": true,
     "noImplicitAny": true,
     "noUnusedLocals": true,
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
@@ -22,17 +22,30 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "importsNotUsedAsValues": "preserve",
+    "typeRoots": [
+      "node_modules/@types",
+      "src/@types"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
   },
   "include": [
-    "./src"
+    "src",
+    "webpack"
   ],
   "exclude": [
     "node_modules",
     "build",
+    "public",
+    "webpack",
+    "config",
     "coverage",
-    "webpack.*.js",
-    "*.config.js",
     "*.test.ts*"
   ],
 }

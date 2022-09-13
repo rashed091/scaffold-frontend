@@ -1,8 +1,8 @@
 import { AppShell, Text, useMantineTheme } from '@mantine/core';
 
-import { BottomBar } from './layout/BottomBar';
-import { SideBar } from './layout/Sidebar';
-import { TopBar } from './layout/TopBar';
+import { BottomBar } from '@/layout/BottomBar';
+import { SideBar } from '@/layout/Sidebar';
+import { TopBar } from '@/layout/TopBar';
 
 function App() {
   const theme = useMantineTheme();

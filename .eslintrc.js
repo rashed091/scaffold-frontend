@@ -19,6 +19,10 @@ module.exports = {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       },
+      alias: {
+        map: [['@', './src']],
+        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+      },
     },
   },
   extends: [
@@ -28,6 +32,7 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
+    'plugin:import/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:eslint-comments/recommended',
     'eslint:recommended',
