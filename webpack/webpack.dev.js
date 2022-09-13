@@ -1,8 +1,10 @@
-const webpack = require('webpack')
-const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
+import webpack from 'webpack';
+import { merge } from 'webpack-merge';
 
-module.exports = {
-  mode: 'development',
+import * as common from './webpack.common.js';
+
+const development = {
   devtool: 'cheap-module-source-map',
   devServer: {
     hot: true,
@@ -14,4 +16,6 @@ module.exports = {
       'process.env.name': JSON.stringify('Development'),
     }),
   ],
-}
+};
+
+export const WebpackDevConfig = merge(common.configs, development);

@@ -1,9 +1,7 @@
-const { merge } = require('webpack-merge')
-const commonConfig = require('./webpack.common.js')
+import * as config from './config/index.js';
+import * as DevConfig from './webpack.dev.js';
+import * as ProdConfig from './webpack.prod.js';
 
-module.exports = (envVars) => {
-  const { env } = envVars
-  const envConfig = require(`./webpack.${env}.js`)
-  const config = merge(commonConfig, envConfig)
-  return config
-}
+export default config.isDevelopment
+  ? DevConfig.WebpackDevConfig
+  : ProdConfig.WebpackProdConfig;

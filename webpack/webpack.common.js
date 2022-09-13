@@ -1,54 +1,54 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyPlugin = require('copy-webpack-plugin')
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-module.exports = {
-  entry: path.resolve(__dirname, '..', './src/index.tsx'),
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+
+import * as config from './config/index.js';
+import * as modules from './modules/index.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+export const configs = {
+  entry: `${config.paths.src}/index.tsx`,
   resolve: {
-    extensions: ['.tsx', '.ts', '.jsx', '.js'],
+    extensions: ['.tsx', '.ts', '.jsx', '.js', 'json'],
+    alias: {
+      '@': config.paths.src,
+    },
   },
   module: {
-    rules: [
-      {
-        test: /\.(ts|js)x?$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-          },
-        ],
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-        type: 'asset/resource',
-      },
-      {
-        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
-        type: 'asset/inline',
-      },
-    ],
+    rules: [modules.tj, modules.css, modules.images, modules.fonts],
   },
   output: {
-    path: path.resolve(__dirname, '..', './build'),
-    filename: 'bundle.js',
+    path: config.paths.build,
+    filename: config.outputs.JS_FILE_OUTPUT,
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, '..', './public/index.html'),
+      template: `${config.paths.public}/index.html`,
     }),
-    new CopyPlugin({
+    new CopyWebpackPlugin({
       patterns: [
         {
-          from: __dirname + '/src/assets/images',
-          to: 'assets/images',
+          from: config.paths.public,
+          to: config.paths.build,
           noErrorOnMissing: true,
+          globOptions: {
+            dot: true,
+            ignore: ['**/.DS_Store', '**/.gitkeep', '**/index.html'],
+          },
         },
       ],
     }),
+    new CleanWebpackPlugin({
+      root: config.paths.build,
+    }),
   ],
   stats: 'errors-only',
+  context: __dirname,
+  target: config.isDevelopment ? 'web' : 'browserslist',
+  mode: config.isDevelopment ? 'development' : 'production',
 };
