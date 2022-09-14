@@ -8,7 +8,7 @@ module.exports = {
     '<rootDir>/src/**/*.test.{js,jsx,ts,tsx}',
     '<rootDir>/e2e/**/*.test.{js,jsx,ts,tsx}',
   ],
-  collectCoverage: true,
+  collectCoverage: false,
   coverageDirectory: 'coverage',
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
