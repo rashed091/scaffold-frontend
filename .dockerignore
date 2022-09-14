@@ -1,15 +1,16 @@
-#Ignore passwords file
+#Ignore files
 passwords.txt
-
-#Ignore logs directory
-logs/
-
-#Ignore the git and cache folders
-.cache
-
-#Ingore all markdown and class files
 *.md
 **/*.class
 
 #Ignore node modules
 **/node_modules
+
+#Ignore folders
+coverage/
+.github/
+.vscode/
+logs/
+.cache
+e2e/
+playwright-report/
