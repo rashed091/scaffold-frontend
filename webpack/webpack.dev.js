@@ -9,6 +9,7 @@ const development = {
   devServer: {
     hot: true,
     open: true,
+    port: 3690,
   },
   plugins: [
     new ReactRefreshWebpackPlugin(),
