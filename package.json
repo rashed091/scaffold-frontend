@@ -20,7 +20,7 @@
   "homepage": "https://github.com/rashed091/scaffold-frontend#readme",
   "scripts": {
     "serve": "cross-env NODE_ENV=development webpack serve --config webpack.config.babel.js",
-    "build": "webpack --progress --config webpack.config.babel.js",
+    "build": "webpack --progress --colors --config webpack.config.babel.js",
     "check-size": "webpack --config webpack.config.babel.js --profile --json > webpack-stats.json && webpack-bundle-analyzer webpack-stats.json",
     "lint": "eslint --fix \"./src/**/*.{js,jsx,ts,tsx,json}\"",
     "format": "prettier --write \"./src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
