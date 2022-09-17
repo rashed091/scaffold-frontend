@@ -4,5 +4,5 @@ import App from './App';
 
 it('loads and displays greeting', async () => {
   render(<App />);
-  expect(await screen.findByText('Containers')).toBeInTheDocument();
+  expect(await screen.findByText(`${process.env.APP_NAME}`)).toBeInTheDocument();
 });
