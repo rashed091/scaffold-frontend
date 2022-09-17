@@ -9,11 +9,7 @@
     "type": "git",
     "url": "git+https://github.com/rashed091/scaffold-frontend.git"
   },
-  "keywords": [
-    "react",
-    "bootstrap",
-    "scaffold"
-  ],
+  "keywords": ["react", "bootstrap", "scaffold"],
   "bugs": {
     "url": "https://github.com/rashed091/scaffold-frontend/issues"
   },
@@ -91,6 +87,7 @@
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-testing-library": "^5.6.3",
+    "fork-ts-checker-webpack-plugin": "^7.2.13",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.1",
     "identity-obj-proxy": "^3.0.0",
@@ -111,22 +108,13 @@
     "webpack-merge": "^5.8.0"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json}": [
-      "eslint --fix"
-    ],
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
-      "prettier --write"
-    ]
+    "src/**/*.{js,jsx,ts,tsx,json}": ["eslint --fix"],
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": ["prettier --write"]
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
   },
-  "browserslist": [
-    "last 2 versions",
-    "> 5%",
-    "not dead",
-    "not IE < 11"
-  ]
+  "browserslist": ["last 2 versions", "> 5%", "not dead", "not IE < 11"]
 }
