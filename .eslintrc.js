@@ -9,6 +9,7 @@ module.exports = {
     node: true,
     es6: true,
     browser: true,
+    jest: true,
   },
   ignorePatterns: ['node_modules/*'],
   settings: {
