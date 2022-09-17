@@ -1,10 +1,4 @@
-import {
-  createStyles,
-  Navbar,
-  Stack,
-  Tooltip,
-  UnstyledButton,
-} from '@mantine/core';
+import { createStyles, Navbar, Stack, Tooltip, UnstyledButton } from '@mantine/core';
 import { useState } from 'react';
 import {
   CalendarStats,
@@ -26,16 +20,10 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    color:
-      theme.colorScheme === 'dark'
-        ? theme.colors.dark[0]
-        : theme.colors.gray[7],
+    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
 
     '&:hover': {
-      backgroundColor:
-        theme.colorScheme === 'dark'
-          ? theme.colors.dark[5]
-          : theme.colors.gray[0],
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[0],
     },
   },
 
@@ -45,8 +33,7 @@ const useStyles = createStyles((theme) => ({
         variant: 'light',
         color: theme.primaryColor,
       }).background,
-      color: theme.fn.variant({ variant: 'light', color: theme.primaryColor })
-        .color,
+      color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
     },
   },
 }));
@@ -72,10 +59,7 @@ function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
   const { classes, cx } = useStyles();
   return (
     <Tooltip label={label} position="right" transitionDuration={0}>
-      <UnstyledButton
-        onClick={onClick}
-        className={cx(classes.link, { [classes.active]: active })}
-      >
+      <UnstyledButton onClick={onClick} className={cx(classes.link, { [classes.active]: active })}>
         <Icon />
       </UnstyledButton>
     </Tooltip>
@@ -86,12 +70,7 @@ export function SideBar() {
   const [active, setActive] = useState(2);
 
   const links = mockdata.map((link, index) => (
-    <NavbarLink
-      {...link}
-      key={link.label}
-      active={index === active}
-      onClick={() => setActive(index)}
-    />
+    <NavbarLink {...link} key={link.label} active={index === active} onClick={() => setActive(index)} />
   ));
 
   return (

@@ -1,15 +1,8 @@
-import {
-  Autocomplete,
-  Burger,
-  createStyles,
-  Group,
-  Header,
-  MediaQuery,
-} from '@mantine/core';
+import { Autocomplete, Burger, createStyles, Group, Header, MediaQuery } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Search } from 'tabler-icons-react';
 
-import { MantineLogo } from '../assets/MantineLogo';
+import { MantineLogo } from '../assets/images/MantineLogo';
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -42,18 +35,12 @@ const useStyles = createStyles((theme) => ({
     padding: '8px 12px',
     borderRadius: theme.radius.sm,
     textDecoration: 'none',
-    color:
-      theme.colorScheme === 'dark'
-        ? theme.colors.dark[0]
-        : theme.colors.gray[7],
+    color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.colors.gray[7],
     fontSize: theme.fontSizes.sm,
     fontWeight: 500,
 
     '&:hover': {
-      backgroundColor:
-        theme.colorScheme === 'dark'
-          ? theme.colors.dark[6]
-          : theme.colors.gray[0],
+      backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
     },
   },
 }));
@@ -70,12 +57,7 @@ export function TopBar() {
   ];
 
   const items = links.map((link) => (
-    <a
-      key={link.label}
-      href={link.link}
-      className={classes.link}
-      onClick={(event) => event.preventDefault()}
-    >
+    <a key={link.label} href={link.link} className={classes.link} onClick={(event) => event.preventDefault()}>
       {link.label}
     </a>
   ));
@@ -98,15 +80,7 @@ export function TopBar() {
             className={classes.search}
             placeholder="Search"
             icon={<Search size={16} stroke="1.5" />}
-            data={[
-              'React',
-              'Angular',
-              'Vue',
-              'Next.js',
-              'Riot.js',
-              'Svelte',
-              'Blitz.js',
-            ]}
+            data={['React', 'Angular', 'Vue', 'Next.js', 'Riot.js', 'Svelte', 'Blitz.js']}
           />
         </Group>
       </div>

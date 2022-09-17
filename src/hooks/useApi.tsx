@@ -7,21 +7,19 @@ export default () => {
   const api = useRef(
     axios.create({
       baseURL: '/api/operations',
-    })
+    }),
   );
   useEffect(() => {
     const currentAPI = api.current;
-    const requestInterceptorId = currentAPI.interceptors.request.use(
-      async (config) => {
-        const token = await getAccessTokenSilently();
-        if (config.headers === undefined) {
-          config.headers = {};
-        }
-        config.headers.authorization = `Bearer ${token}`;
-        config.cancelToken = axios.CancelToken.source().token;
-        return config;
+    const requestInterceptorId = currentAPI.interceptors.request.use(async (config) => {
+      const token = await getAccessTokenSilently();
+      if (config.headers === undefined) {
+        config.headers = {};
       }
-    );
+      config.headers.authorization = `Bearer ${token}`;
+      config.cancelToken = axios.CancelToken.source().token;
+      return config;
+    });
     const responseInterceptorId = currentAPI.interceptors.response.use(
       (response) => response,
       async (error) => {
@@ -36,7 +34,7 @@ export default () => {
 				*/
 
         return Promise.reject(error);
-      }
+      },
     );
     return () => {
       currentAPI.interceptors.request.eject(requestInterceptorId);

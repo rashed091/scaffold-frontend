@@ -11,12 +11,7 @@ const AuthProvider = ({ children }: AuthProviderProps) => {
   const audience = process.env.REACT_APP_AUTH0_AUDIENCE || '';
 
   return (
-    <Auth0Provider
-      domain={domain}
-      clientId={clientId}
-      audience={audience}
-      redirectUri={window.location.origin}
-    >
+    <Auth0Provider domain={domain} clientId={clientId} audience={audience} redirectUri={window.location.origin}>
       {children}
     </Auth0Provider>
   );
