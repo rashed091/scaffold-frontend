@@ -29,15 +29,15 @@
       "src/@types"
     ],
     "baseUrl": ".",
+    "rootDir": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "./src/*"
       ]
     }
   },
   "include": [
-    "src",
-    "webpack"
+    "src"
   ],
   "exclude": [
     "node_modules",
