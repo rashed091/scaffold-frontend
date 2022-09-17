@@ -19,7 +19,7 @@ function App() {
       footer={<BottomBar />}
       header={<TopBar />}
     >
-      <Text>Containers</Text>
+      <Text>{process.env.APP_NAME}</Text>
     </AppShell>
   );
 }

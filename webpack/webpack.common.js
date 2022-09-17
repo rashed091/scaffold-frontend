@@ -2,6 +2,7 @@ import path from 'path';
 
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import Dotenv from 'dotenv-webpack';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
@@ -49,6 +50,7 @@ export const configs = {
         configFile: path.resolve(__dirname, '../', 'tsconfig.json'),
       },
     }),
+    new Dotenv(),
   ],
   stats: 'errors-only',
   context: __dirname,
