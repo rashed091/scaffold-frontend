@@ -2,7 +2,7 @@ import { Autocomplete, Burger, createStyles, Group, Header, MediaQuery } from '@
 import { useDisclosure } from '@mantine/hooks';
 import { Search } from 'tabler-icons-react';
 
-import { MantineLogo } from '../assets/images/MantineLogo';
+import { MantineLogo } from '../../assets/images/MantineLogo';
 
 const useStyles = createStyles((theme) => ({
   header: {
