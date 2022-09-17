@@ -18,10 +18,24 @@ const production = {
   ],
   optimization: {
     minimize: true,
-    minimizer: [
-      new MiniCssExtractPlugin({ filename: config.outputs.CSS_FILE_OUTPUT }),
-      new TerserPlugin(),
-    ],
+    minimizer: [new MiniCssExtractPlugin({ filename: config.outputs.CSS_FILE_OUTPUT }), new TerserPlugin()],
+    runtimeChunk: {
+      name: 'runtime',
+    },
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'initial',
+        },
+      },
+    },
+    performance: {
+      hints: false,
+      maxEntrypointSize: 512000,
+      maxAssetSize: 512000,
+    },
   },
 };
 

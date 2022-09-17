@@ -1,5 +1,8 @@
+import path from 'path';
+
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 import { isDevelopment, outputs, paths } from './config';
@@ -39,6 +42,12 @@ export const configs = {
     }),
     new CleanWebpackPlugin({
       root: paths.build,
+    }),
+    new ForkTsCheckerWebpackPlugin({
+      async: isDevelopment,
+      typescript: {
+        configFile: path.resolve(__dirname, '../', 'tsconfig.json'),
+      },
     }),
   ],
   stats: 'errors-only',

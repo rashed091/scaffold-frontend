@@ -14,4 +14,10 @@ export const paths = {
   public: path.resolve(__dirname, '../../', 'public'), // Public directory
 };
 
+export const aliasPaths = {
+  '@images': path.resolve(__dirname, '../../', 'src/assets/images'),
+  '@styles': path.resolve(__dirname, '../../', 'src/assets/styles'),
+  '@components': path.resolve(__dirname, '../../', 'src/components'),
+};
+
 export const isDevelopment = process.env.NODE_ENV !== 'production';
