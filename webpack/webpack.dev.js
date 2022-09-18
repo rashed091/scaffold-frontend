@@ -10,6 +10,9 @@ const development = {
     hot: true,
     open: true,
     port: 3690,
+    client: {
+      overlay: true,
+    },
   },
   plugins: [
     new ReactRefreshWebpackPlugin(),
